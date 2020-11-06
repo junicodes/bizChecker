@@ -20,6 +20,10 @@ class Routes {
         return "auth/sign-up"
     }
 
+    get login() {
+        return "auth/login"
+    }
+
     get verifyCac() {
         return "cac"
     }
