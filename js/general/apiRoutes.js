@@ -24,8 +24,8 @@ class Routes {
         return "auth/login"
     }
 
-    get verifyCac() {
-        return "cac"
+    verifyCac(cacToken) {
+        return `verify/bizness/${cacToken}`;
     }
     get verifyTin() {
         return "tin"

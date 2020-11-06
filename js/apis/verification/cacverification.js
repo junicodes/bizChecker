@@ -4,7 +4,7 @@ const cacParam = urlParams.get('cacToken');
 
 const verifycacNumber = async() => {
     const routes = new Routes;
-    const url = `${routes.apiOrigin}${routes.apiVersion}${routes.verifyCac}`;
+    const url = `${routes.apiOrigin}${routes.verifyCac(cacParam)}`;
 
     try{
         const response = await fetch(url, {
@@ -15,9 +15,10 @@ const verifycacNumber = async() => {
         });
 
         const data = await response.json();
-
-        if (data.status === 'Success'){
-            // Alert Success Message 
+        console.log(data)
+        if (data.status === 'true'){
+            alertify.set('notifier','position', 'top-center');
+            alertify.error(data.message)
         }else {
             alertify.set('notifier','position', 'top-center');
             alertify.error(data.message)
@@ -31,4 +32,4 @@ const verifycacNumber = async() => {
     }
 
 }
-verifycacNumber();
+ verifycacNumber();
