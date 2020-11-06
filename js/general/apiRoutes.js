@@ -13,16 +13,23 @@ class Routes {
     }
 
     get apiOrigin() {
-      return 'https://api-sorosoke.herokuapp.com/';
+      return ' https://biz-checker-api.herokuapp.com/';
+    } 
+
+    get signUp() {
+        return "auth/sign-up"
     }
 
-    get apiVersion() {
-        return "api/v1/"
+    get verifyCac() {
+        return "cac"
     }
-    
-    get checkSession() {
-      return "api/v1/check/session"
+    get verifyTin() {
+        return "tin"
     }
+
+    /*get checkSession() {
+        return "api/v1/check/session"
+      }
 
     get twitterLogin() {
         return "twitter/auth/url"
@@ -72,7 +79,7 @@ class Routes {
 
     get createPersonalRoom() {
         return 'personal/create-room'
-    }
+    }*/
 }
   
   
