@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="js/packages/alertifyjs-master/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="js/packages/alertifyjs-master/build/css/themes/default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
+    <script src="js/packages/alertifyjs-master/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <title>Register | Biz Checker</title>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="auth-full col-12">
+                <div class="auth-con col-10 mx-auto">
+                    <h1 class="logo text-center"><a href="index.html">BizChecker<span style="color: #106eea !important;">.</span></a></h1>
+                    <div class="col-12 row mx-0">
+                        <div class="actual-form-card col-12 col-md-7 mx-2 border">
+                            <h5 class="text-center mt-4">LOGIN</h5>
+                            <form class="col-12 col-md-9 mx-auto" action="" id="registration-form">
+
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label for="useremail">EMAIL</label>
+                                        <input class="form-control" type="email" name="useremail" id="useremail" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label for="password">PASSWORD</label>
+                                        <input class="form-control" type="password" name="password" id="password" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button type="submit" class="col-12 btn btn-brand" id="login-btn">Log In</button>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="other-card col-12 col-md-4 mx-2 border">
+                            <h4 class="text-center mt-5">Don't have an account?</h4>
+                            <p class="text-center">Quickly create an account and get started!</p>
+                            <div class="col-12 text-center">
+                                <button onclick="location.href='register.html'" class="btn btn-brand col-10">Register Here</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <main class="container">
+        <div class="row">
+            <section class="col col-md-6">
+
+            </section>
+            <section class="col col-md-6">
+                <div class="row">
+                    <form action="" id="registration-form">
+                        <div class="row">
+                            <div class="col-6 form-group">
+                                <label for="firstname">Firstname:</label>
+                                <input class="form-control" type="text" name="firstname" id="firstname" required>
+                            </div>
+                            <div class="col-6 form-group">
+                                <label for="lastname">Lastname:</label>
+                                <input class="form-control" type="text" name="lastname" id="lastname" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="businessname">Business Name:</label>
+                                <input class="form-control" type="text" name="businessname" id="businessname" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 form-group">
+                                <label for="cacnumber">CAC Number:</label>
+                                <input class="form-control" type="text" name="cacnumber" id="cacnumber" required>
+                            </div>
+                            <div class="col-6 form-group">
+                                <label for="tinnumber">Company Tin Number:</label>
+                                <input class="form-control" type="text" name="tinnumber" id="tinnumber" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="useremail">Email:</label>
+                                <input class="form-control" type="email" name="useremail" id="useremail" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="password">Password:</label>
+                                <input class="form-control" type="password" name="password" id="password" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p> By clicking submit, you confirm that you have read and agree to Aika Load’s
+                                    <a href="#">Terms and Conditions.</a> </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="bizcheck-btn" id="signup-btn">Create Account</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+
+            </section>
+        </div>
+
+
+    </main> -->
+
+
+
+
+
+
+
+
+    <script src="js/general/third_party_cdn.js"></script>
+    <script src="js/general/windowPopUp.js"></script>
+    <script src="js/general/apiRoutes.js"></script>
+    <script src="js/apis/auth/login.js"></script>
+</body>
+
+</html>
