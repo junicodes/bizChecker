@@ -5,6 +5,7 @@ const lastName = document.querySelector('#lastname');
 const businessName = document.querySelector('#businessname');
 const cacNumber = document.querySelector('#cacnumber');
 const tinNumber = document.querySelector('#tinnumber');
+const tinTransactionRef = document.querySelector('#tinTransactionRef');
 const email = document.querySelector('#useremail');
 const password = document.querySelector('#password');
 
@@ -55,11 +56,12 @@ const signUp = async () => {
     const url = `${routes.apiOrigin}${routes.signUp}`
 
     const userDetails = {
-       business_owner: firstName.value + ' ' + lastName.value,
-        // businessName: businessName.value,
+        bizness_owner: firstName.value + ' ' + lastName.value,
+        bizness_name: businessName.value,
         email: email.value, 
         cac_number: cacNumber.value,
         tin_number: tinNumber.value,
+        tin_transaction_ref: tinTransactionRef,
         password: password.value
     }
     console.log(JSON.stringify(userDetails))
