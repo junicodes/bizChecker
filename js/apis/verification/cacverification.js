@@ -1,8 +1,8 @@
-const queryString = window.location.search;
+/*const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const cacParam = urlParams.get('cacToken');
+const cacParam = urlParams.get('cacToken');*/
 
-const verifycacNumber = async() => {
+const verifycacNumber = async(cacParam) => {
     const routes = new Routes;
     const url = `${routes.apiOrigin}${routes.verifyCac(cacParam)}`;
 
@@ -32,4 +32,3 @@ const verifycacNumber = async() => {
     }
 
 }
- verifycacNumber();
