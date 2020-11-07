@@ -29,12 +29,12 @@ const loadDashboard = async () =>{
                                         </span>
                                         <div class="form-group">
                                             <label class="mb-0" for="">Business CAC Verification link</label>
-                                            <p style='border: 1px solid #c4c4c4; border-radius:5px; font-size:1.5em' class='pt-2 pb-2'><a href='https://pensive-haibt-48a7c6.netlify.app/verify.html?cacToken=${business.inapp_cac_url_token}'>https://pensive-haibt-48a7c6.netlify.app/verify?cacToken=${business.inapp_cac_url_token}</a></p>
-                                            <code>
-                                            <textarea class="form-control embed-anchor" id="" style="height: 300px;">
-                                            <blockquote class="embedly-card"><h4><a href="https://pensive-haibt-48a7c6.netlify.app/verify.html?cacToken=${business.inapp_cac_url_token}">Verify Business | Biz Checker</a></h4><p>null</p></blockquote><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                                            <p style='border: 1px solid #c4c4c4; border-radius:5px; font-size:1.5em' class='pt-2 pl-2 pb-2'>
+                                                <a style="color: red;" href='https://pensive-haibt-48a7c6.netlify.app/verify.html?cacToken=${business.inapp_cac_url_token}'>https://pensive-haibt-48a7c6.netlify.app/verify?cacToken=${business.inapp_cac_url_token}</a></p>
+                                     
+                                            <textarea class="form-control embed-anchor" id="" style="height: 100px; font-size: 12px; color: red"><blockquote style="font-size: 10px;" class="embedly-card "><p class="" style="font-size: 8px"><a href="https://pensive-haibt-48a7c6.netlify.app/verify.html?cacToken=${business.inapp_cac_url_token}">Verify Business | Biz Checker</a></p><p>null</p></blockquote><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
                                             </textarea>
-                                            </code>
+                                         
                                             <small style="font-size: 10px;">Copy link or Embed HTML code into your application to verify Business to your customers.</small>
 
                                             <p class="mt-3" style="font-size: 15px;">Financial Institution Linked </p>
@@ -54,11 +54,18 @@ const loadDashboard = async () =>{
                                         </div>
                                     </div>
                                     <div class="float-right b2b-button ml-2 mt-3">
-                                        <button class="btn btn-danger">MONO <br> <small>B2B Account Verification</small></button>
+                                        <button class="btn btn-danger mono-preview">MONO <br> <small>B2B Account Verification</small></button>
                                         <p class="m-0 mt-2 p-0" style="font-size: 10px; font-weight: normal;">Click the MONO button to begin bank account verification for Business to Business(B2B) transactions</p>
                                     </div>
                                 </div>
         `
+    })
+    
+    const monoPreview = Array.from(document.querySelectorAll('.mono-preview'))
+    monoPreview.map(x => {
+        x.addEventListener('click', (e) => {
+            document.querySelector("#main").style.display = 'block'
+        })
     })
 
 
@@ -81,3 +88,4 @@ verifyToken.addEventListener('click', (event)=>{
     event.preventDefault();
     verifycacNumber(event.target.dataset.cactoken);
 })*/
+

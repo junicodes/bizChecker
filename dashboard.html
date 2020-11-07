@@ -164,12 +164,18 @@
     </div>
 
 
-  <div id="main" style="overflow-y: auto; height: 630px; overflow-x: hidden; position: absolute; left: 100px; top: 30px;">
-    <iframe name="main" style="margin-bottom: 100px;" src="http://localhost:3000" height="100%" width="410px" scrolling="no" border="0" frameborder="0" allowtransparency="true" class="frame">
+  <div id="main" style="overflow-y: auto; height: 630px; overflow-x: hidden; position: fixed; left: 100px; top: 30px;">
+    <p class="m-0 p-0 pt-2 pb-2" style="text-align: right; color: black; background: white; font-weight: bold;">
+      <span id="close-mono" style="border: 1px solid red; cursor: pointer; border-radius: 3px;">Close Process&nbsp;&nbsp;</span> </p>
+    <iframe name="main" style="margin-bottom: 100px;" src="https://elated-franklin-1bf9d3.netlify.app" height="100%" width="410px" scrolling="no" border="0" frameborder="0" allowtransparency="true" class="frame">
     </iframe>
   </div>
 
   <script>
+document.querySelector('#close-mono').addEventListener('click', (e) => {
+  document.querySelector('#main').style.display = 'none'
+})
+
     window.addEventListener("message", (e) => receiveMessage(e));
 
   const receiveMessage = (event) => {
