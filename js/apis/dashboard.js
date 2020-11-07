@@ -7,10 +7,15 @@ const businessContainers = document.querySelector('#businessDetails');
 
 const loadDashboard = async () =>{
     const businessInfo = await loadUsersBusinesses();
+
     username.innerText = bizness_owner;
     userEmail.innerText = email;
+    userImage.src = '/images/noimage.jpg'
     businessCount.innerHTML = businessInfo.data.length;
     const businesses = businessInfo.data;
+
+    document.querySelector('#preloader').classList.add('hidden-display')
+    document.querySelector('#user-dash').classList.remove('hidden-display')
 
     businesses.map((business) => {
         businessContainers.innerHTML = `
@@ -24,9 +29,12 @@ const loadDashboard = async () =>{
                                         </span>
                                         <div class="form-group">
                                             <label class="mb-0" for="">Business CAC Verification link</label>
-                                            <p style='border: 1px solid #c4c4c4;' class='pt-2 pb-2'><a href='https://pensive-haibt-48a7c6.netlify.app/verify.html?cacToken=${business.inapp_cac_url_token}'>https://pensive-haibt-48a7c6.netlify.app/verify?cacToken=${business.inapp_cac_url_token}</a></p>
-                                            
-                                            <textarea class="form-control embed-anchor" id="" style="height: 50px;"></textarea>
+                                            <p style='border: 1px solid #c4c4c4; border-radius:5px; font-size:1.5em' class='pt-2 pb-2'><a href='https://pensive-haibt-48a7c6.netlify.app/verify.html?cacToken=${business.inapp_cac_url_token}'>https://pensive-haibt-48a7c6.netlify.app/verify?cacToken=${business.inapp_cac_url_token}</a></p>
+                                            <code>
+                                            <textarea class="form-control embed-anchor" id="" style="height: 300px;">
+                                            <blockquote class="embedly-card"><h4><a href="https://pensive-haibt-48a7c6.netlify.app/verify.html?cacToken=${business.inapp_cac_url_token}">Verify Business | Biz Checker</a></h4><p>null</p></blockquote><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                                            </textarea>
+                                            </code>
                                             <small style="font-size: 10px;">Copy link or Embed HTML code into your application to verify Business to your customers.</small>
 
                                             <p class="mt-3" style="font-size: 15px;">Financial Institution Linked </p>

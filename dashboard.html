@@ -23,7 +23,8 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+
+    <div class="container-fluid ">
         <div class="row">
             <div class="dashboard-full col-12 px-0">
                 <!-- <form class="col-3 mt-4">
@@ -44,7 +45,11 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     </div> -->
                 </nav>
-                <div class="col-12 row mx-0 dashboard-con pt-2">
+                <div class="preloader p-5 m-auto" id="preloader">
+                    <h4 class='text-center' id="business-verification-status"> <span class="spinner-grow spinner-grow-sm" style="width: 1.3em; height: 1.3em; color: #dc3546;" role="status" aria-hidden="true"></span> Loading... </h4>
+
+                </div>
+                <div class="col-12 row mx-0 dashboard-con pt-2 hidden-display" id="user-dash">
                     <div class="col-12 col-md-3 px-0 mx-auto user-profile-section mb-4">
                         <div class="mb-4" style=" border-radius: 10px 10px 0px 0px;">
                             <div class="user-image mx-auto mt-3">
@@ -146,7 +151,7 @@
                         <hr>
                     </div>
                 </div>
-                <div class="float-right b2b-button ml-2 mt-3">
+                <div class="float-right b2b-button ml-2 mt-3 hidden-display">
                     <button class="btn btn-danger">MONO <br> <small>B2B Account Verification</small></button>
                     <p class="m-0 mt-2 p-0" style="font-size: 10px; font-weight: normal;">Click the MONO button to begin bank account verification for Business to Business(B2B) transactions</p>
                 </div>
