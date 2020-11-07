@@ -27,7 +27,9 @@
     font-display: swap;
 } */
 
+
 /*Particle js Animation Styling */
+
 .particles-js-canvas-el {
     position: absolute;
     left: 0;
@@ -38,31 +40,35 @@
 .color-white {
     color: white;
 }
-  .scroller{
+
+.scroller {
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: rgb(185, 184, 184);
-  }
-  .scroller::-webkit-scrollbar {
+}
+
+.scroller::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-  }
-  .scroller::-webkit-scrollbar-track {
-    background:  rgb(185, 184, 184);
+}
+
+.scroller::-webkit-scrollbar-track {
+    background: rgb(185, 184, 184);
     border-radius: 10px;
     display: none;
-  }
-  
-  .scroller::-webkit-scrollbar-thumb {
+}
+
+.scroller::-webkit-scrollbar-thumb {
     color: black;
     border-radius: 10px;
-    background:  rgb(185, 184, 184);
-  }
-  .scroller::-webkit-scrollbar-thumb:hover {
-    background:  white;
+    background: rgb(185, 184, 184);
+}
+
+.scroller::-webkit-scrollbar-thumb:hover {
+    background: white;
     border-color: #3f3d56;
     border-radius: 10px;
-  }
+}
 
 .poppins-font {
     font-family: 'Poppins', sans-serif;
@@ -75,10 +81,10 @@
 .loader-logo {
     width: 80vh;
 }
+
 .loader-logo img {
     width: 40vh;
 }
-
 
 .font-12px {
     font-size: 12px;
@@ -109,14 +115,21 @@
     color: white;
     font-weight: 300;
 }
+
 .btn-brand:hover {
     background: #08428d;
     color: white;
     font-weight: 300;
 }
-.logo a{
+
+.logo a {
     color: black !important;
 }
+
 .color-grey {
     color: grey;
+}
+
+.hidden-display {
+    display: none;
 }
