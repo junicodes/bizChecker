@@ -61,7 +61,7 @@ const signUp = async () => {
         email: email.value, 
         cac_number: cacNumber.value,
         tin_number: tinNumber.value,
-        tin_transaction_ref: tinTransactionRef,
+        tin_transaction_ref: tinTransactionRef.value,
         password: password.value
     }
     console.log(JSON.stringify(userDetails))
@@ -76,21 +76,24 @@ const signUp = async () => {
             body: JSON.stringify(userDetails),
         });
 
+        console.log(response)
+
         const data = await response.json();
          
         if (data.status === true){
-           
-            alertify.set('notifier','position', 'top-center');
-
-            alertify.success(data.user.message)
-            location.replace('/login.html');
+            
             registrationBtn.innerHTML='Create Account';
+            alertify.set('notifier','position', 'top-center');
+            alertify.success(data.user.message)
+
+            setTimeout(() => {
+                location.replace('/login.html');
+            }, 2000);
 
         }else {
+            registrationBtn.innerHTML='Create Account';
             alertify.set('notifier','position', 'top-center');
             alertify.error(data.message)
-            registrationBtn.innerHTML='Create Account';
-
         }
 
         }catch(error){
