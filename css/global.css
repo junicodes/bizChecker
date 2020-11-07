@@ -72,16 +72,6 @@
     font-family: 'impact';
 }
 
-
-.sorosoke-loader {
-    height: 100vh;
-    position: absolute;
-    pointer-events: none;
-    background: #151314;
-    background-position: center;
-    background-size: cover;
-    z-index: 99;
-}
 .loader-logo {
     width: 80vh;
 }
@@ -123,4 +113,10 @@
     background: #08428d;
     color: white;
     font-weight: 300;
+}
+.logo a{
+    color: black !important;
+}
+.color-grey {
+    color: grey;
 }

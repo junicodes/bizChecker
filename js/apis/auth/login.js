@@ -33,7 +33,7 @@ const validateFields = () => {
     }else if (validPassword() == false){
         alertify.set('notifier','position', 'top-center');
         alertify.error('Your Password must be at least 6 characters');
-        loginBtn.innerHTML='Create Account';
+        loginBtn.innerHTML='Login';
 
     }
     return true;
@@ -65,20 +65,21 @@ const login = async () => {
          console.log(data)
         if (data.status === true){
             localStorage.setItem('bizchecker-user', JSON.stringify(data.user));
+            localStorage.setItem('bizchecker-user-token', JSON.stringify(data.user.token.token));
             alertify.set('notifier','position', 'top-center');
             location.replace('/dashboard.html');
             
-            loginBtn.innerHTML='Create Account';
+            loginBtn.innerHTML='Login';
 
         }else {
             alertify.set('notifier','position', 'top-center');
             alertify.error(data.message)
-            loginBtn.innerHTML='Create Account';
+            loginBtn.innerHTML='Login';
 
         }
 
         }catch(error){
-            loginBtn.innerHTML='Create Account';
+            loginBtn.innerHTML='Login';
 
             alertify.set('notifier','position', 'top-center');
             alertify.error('Something went wrong please try again later')

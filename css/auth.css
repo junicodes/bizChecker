@@ -11,7 +11,7 @@
 }
 
 .actual-form-card {
-    height: 83vh;
+    height: 85vh;
     background: white;
     border-radius: 5px;
 }
@@ -39,9 +39,6 @@ input {
 input:focus, input:active {
     outline: none !important;
     box-shadow: none !important;
-}
-.logo a{
-    color: black !important;
 }
 .other-card h4 {
     color: white;

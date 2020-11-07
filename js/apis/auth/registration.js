@@ -5,6 +5,7 @@ const lastName = document.querySelector('#lastname');
 const businessName = document.querySelector('#businessname');
 const cacNumber = document.querySelector('#cacnumber');
 const tinNumber = document.querySelector('#tinnumber');
+const tinTransactionRef = document.querySelector('#tinTransactionRef');
 const email = document.querySelector('#useremail');
 const password = document.querySelector('#password');
 
@@ -55,11 +56,12 @@ const signUp = async () => {
     const url = `${routes.apiOrigin}${routes.signUp}`
 
     const userDetails = {
-       business_owner: firstName.value + ' ' + lastName.value,
-        // businessName: businessName.value,
+        bizness_owner: firstName.value + ' ' + lastName.value,
+        bizness_name: businessName.value,
         email: email.value, 
         cac_number: cacNumber.value,
         tin_number: tinNumber.value,
+        tin_transaction_ref: tinTransactionRef.value,
         password: password.value
     }
     console.log(JSON.stringify(userDetails))
@@ -74,21 +76,24 @@ const signUp = async () => {
             body: JSON.stringify(userDetails),
         });
 
+        console.log(response)
+
         const data = await response.json();
          
         if (data.status === true){
-           
-            alertify.set('notifier','position', 'top-center');
-
-            alertify.success(data.user.message)
-            location.replace('/login.html');
+            
             registrationBtn.innerHTML='Create Account';
+            alertify.set('notifier','position', 'top-center');
+            alertify.success(data.user.message)
+
+            setTimeout(() => {
+                location.replace('/login.html');
+            }, 2000);
 
         }else {
+            registrationBtn.innerHTML='Create Account';
             alertify.set('notifier','position', 'top-center');
             alertify.error(data.message)
-            registrationBtn.innerHTML='Create Account';
-
         }
 
         }catch(error){
