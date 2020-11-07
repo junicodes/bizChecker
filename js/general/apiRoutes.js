@@ -27,6 +27,12 @@ class Routes {
     verifyCac(cacToken) {
         return `verify/bizness/${cacToken}`;
     }
+
+    get userBusinesses(){
+        return 'my/bizness/1';
+    }
+
+
     get verifyTin() {
         return "tin"
     }

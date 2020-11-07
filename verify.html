@@ -5,40 +5,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="css/global.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" href="js/packages/alertifyjs-master/build/css/alertify.min.css" />
     <link rel="stylesheet" href="js/packages/alertifyjs-master/build/css/themes/default.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
     <script src="js/packages/alertifyjs-master/build/alertify.min.js"></script>
-    <title data-title>Welcome BizChecker</title>
-    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <title>Register | Biz Checker</title>
+
 </head>
 
 <body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <h1 class="logo text-center"><a href="index.html">BizChecker<span
+        style="color: #dc3546 !important;">.</span></a></h1>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </div> -->
+        </nav>
+        <div class="row">
+            <div class="business-info-con border scroller col-12 pt-5">
+                <div class="text-center col-12">
+                    <div class=" col-12 p-5 text-center">
+                        <h2>Business Verification Status</h2>
+                        <h4 class='text-center' id="business-verification-status"> <span class="spinner-border spinner-border-sm" style="width: 1.3em; height: 1.3em;" role="status" aria-hidden="true"></span> Checking status... </h4>
+                    </div>
+                </div>
 
-    <div class="col-6 mx-auto">
-        <form>
-            <div class="form-group mt-5">
-                <label for="exampleInputEmail1">Enter Copany Name</label>
-                <input type="text" class="form-control" id="cacName" aria-describedby="emailHelp">
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Enter CAC Number</label>
-                <input type="text" class="form-control" id="cacNumber">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <button id="verify-business" type="submit" class="btn btn-primary">Verify Business</button>
-        </form>
-    </div>
 
+            <!-- <main class="container">
+        <div class="row">
+            <section class="col col-md-6">
+
+            </section>
+            <section class="col col-md-6">
+                <div class="row">
+                    <form action="" id="registration-form">
+                        <div class="row">
+                            <div class="col-6 form-group">
+                                <label for="firstname">Firstname:</label>
+                                <input class="form-control" type="text" name="firstname" id="firstname" required>
+                            </div>
+                            <div class="col-6 form-group">
+                                <label for="lastname">Lastname:</label>
+                                <input class="form-control" type="text" name="lastname" id="lastname" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="businessname">Business Name:</label>
+                                <input class="form-control" type="text" name="businessname" id="businessname" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 form-group">
+                                <label for="cacnumber">CAC Number:</label>
+                                <input class="form-control" type="text" name="cacnumber" id="cacnumber" required>
+                            </div>
+                            <div class="col-6 form-group">
+                                <label for="tinnumber">Company Tin Number:</label>
+                                <input class="form-control" type="text" name="tinnumber" id="tinnumber" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="useremail">Email:</label>
+                                <input class="form-control" type="email" name="useremail" id="useremail" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="password">Password:</label>
+                                <input class="form-control" type="password" name="password" id="password" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p> By clicking submit, you confirm that you have read and agree to Aika Load’s
+                                    <a href="#">Terms and Conditions.</a> </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="bizcheck-btn" id="signup-btn">Create Account</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+
+            </section>
+        </div>
+
+
+    </main> -->
+
+
+
+
+
+
+
+
+            <script src="js/general/third_party_cdn.js"></script>
+            <script src="js/general/windowPopUp.js"></script>
+            <script src="js/general/apiRoutes.js"></script>
+            <script src="js/apis/verification/cacverification.js"></script>
 </body>
-<script src="js/general/third_party_cdn.js"></script>
-<script src="js/general/windowPopUp.js"></script>
-<script src="js/general/apiRoutes.js"></script>
-<script src="js/verifyme.js"></script>
 
 </html>

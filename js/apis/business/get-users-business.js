@@ -1,23 +1,21 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const cacParam = urlParams.get('cacToken');
-
-const verifycacNumber = async() => {
+const loadUsersBusinesses = async() => {
     const routes = new Routes;
-    const url = `${routes.apiOrigin}${routes.verifyCac(cacParam)}`;
+    const url = `${routes.apiOrigin}${routes.userBusinesses}`;
+    const auth = JSON.parse(localStorage.getItem('bizchecker-user-token'));
 
     try{
         const response = await fetch(url, {
             method: 'GET',
             headers:{
              'Content-Type': 'application/json',
+             'Authorization': `Bearer ${auth}`,
             }
         });
 
         const data = await response.json();
-        console.log(data)
-        if (data.status === true){
-            document.querySelector('#business-verification-status').innerHTML = `${data.verifyStatus.message.companyName} : ${data.message}`
+        console.log(data.yourBiznesses, data)
+        if (data.success === true){
+            return data.yourBiznesses;
         }else {
             alertify.set('notifier','position', 'top-center');
             alertify.error(data.message)
@@ -31,4 +29,3 @@ const verifycacNumber = async() => {
     }
 
 }
-verifycacNumber();
