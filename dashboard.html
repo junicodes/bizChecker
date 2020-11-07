@@ -2,154 +2,166 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  <!-- <link rel="stylesheet" href="css/main.css"> -->
-  <link rel="stylesheet" href="js/packages/alertifyjs-master/build/css/alertify.min.css" />
-  <link rel="stylesheet" href="js/packages/alertifyjs-master/build/css/themes/default.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
-  <script src="js/packages/alertifyjs-master/build/alertify.min.js"></script>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/dashboard.css">
-  <title>Register | Biz Checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="js/packages/alertifyjs-master/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="js/packages/alertifyjs-master/build/css/themes/default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
+    <script src="js/packages/alertifyjs-master/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="/js/general/onsession.js"></script>
+    <title>Register | Biz Checker</title>
 
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="dashboard-full col-12 px-0">
-        <!-- <form class="col-3 mt-4">
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="dashboard-full col-12 px-0">
+                <!-- <form class="col-3 mt-4">
                     <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Your CAC Verification link</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      <small>Embed this link into your application to verify its identity</small>
+                        <label for="exampleFormControlTextarea1">Your CAC Verification link</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <small>Embed this link into your application to verify its identity</small>
+                        <button id="verify-token-btn" class=''>Check Verification Status</button>
                     </div>
                   </form> -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <h1 class="logo text-center"><a href="index.html">BizChecker<span
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <h1 class="logo text-center"><a href="index.html">BizChecker<span
                 style="color: #dc3546 !important;">.</span></a></h1>
-          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
                   
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     </div> -->
-        </nav>
-        <div class="col-12 row mx-0 dashboard-con pt-2">
-          <div class="col-12 col-md-3 px-0 mx-auto user-profile-section mb-4">
-            <div class="mb-4" style=" border-radius: 10px 10px 0px 0px;">
-              <div class="user-image mx-auto mt-3">
-                <img src="images/woman-suit.jpg" alt="">
-              </div>
-              <h6 class="text-center mt-2 mb-0" style=""><span>Jane Lockheart</span><span
-                style="color: #dc3546 !important;">.</span></h6>
-              <p class="text-center color-grey mb-0" style="font-size: 10px;">
-                janelockheart@gmail.com
-              </p>
-              <p class="text-center color-grey mb-0" style="font-size: 10px;">
-                4 businesses
-              </p>
-            </div>
-          </div>
-          <div class="col-12 col-md-8 mx-auto business-info-section px-0">
-            <div class="business-info-con border scroller col-12 col-lg-9 pt-3 px-0">
-              <div class="text-center col-12">
-                <span style="font-size: 20px;">Your Businesses<span
+                </nav>
+                <div class="preloader p-5 m-auto" id="preloader">
+                    <h4 class='text-center' id="business-verification-status"> <span class="spinner-grow spinner-grow-sm" style="width: 1.3em; height: 1.3em; color: #dc3546;" role="status" aria-hidden="true"></span> Loading... </h4>
+
+                </div>
+                <div class="col-12 row mx-0 dashboard-con pt-2 hidden-display" id="user-dash">
+                    <div class="col-12 col-md-3 px-0 mx-auto user-profile-section mb-4">
+                        <div class="mb-4" style=" border-radius: 10px 10px 0px 0px;">
+                            <div class="user-image mx-auto mt-3">
+                                <img id='user-img' src="images/woman-suit.jpg" alt="">
+                            </div>
+                            <h6 class="text-center mt-2 mb-0" id="user-name"><span>Jane Lockheart</span><span style="color: #dc3546 !important;">.</span></h6>
+                            <p class="text-center color-grey mb-0" style="font-size: 10px;" id="user-email">
+                                janelockheart@gmail.com
+                            </p>
+                            <p class="text-center color-grey mb-0" style="font-size: 10px;">
+                                Businesses: <span id="business-count"> 4 </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 mx-auto business-info-section px-0">
+                        <div class="business-info-con border scroller col-12 col-lg-9 pt-3 px-0">
+                            <div class="text-center col-12">
+                                <span style="font-size: 20px;">Your Businesses<span
                   style="color: #dc3546 !important;">.</span></span><br>
-              <small class="color-grey" style="font-size: 10px;">Here are all the businesses you've registered with
+                                <small class="color-grey" style="font-size: 10px;">Here are all the businesses you've registered with
                 BizChecker</small>
-              </div>
-              <div class="col-12 business-card mt-3 d-flex">
-                <div class="business-image mt-3">
-                  <img src="images/sample-logo.png" alt="">
-                </div>
-                <div class="float-right business-info pl-2 ml-2 mt-2">
-                  <span class="business-info-name">
+                            </div>
+                            <div id="businessDetails">
+                                <div class="col-12 business-card mt-3 d-flex">
+                                    <div class="business-image mt-3">
+                                        <img src="images/sample-logo.png" alt="">
+                                    </div>
+                                    <div class="float-right business-info pl-2 ml-2 mt-2">
+                                        <span class="business-info-name">
                     Jane's Day Care
                   </span>
-                  <div class="form-group">
-                    <label class="mb-0" for="">Business CAC Verification link</label>
-                    <textarea class="form-control free-link mb-2" id="" rows="3"></textarea>
-                    <textarea class="form-control embed-anchor" id="" style="height: 50px;"></textarea>
-                    <small style="font-size: 10px;">Copy link or Embed HTML code into your application to verify Business to your customers.</small>
+                                        <div class="form-group">
+                                            <label class="mb-0" for="">Business CAC Verification link</label>
+                                            <textarea class="form-control free-link mb-2" id="" rows="3"></textarea>
+                                            <textarea class="form-control embed-anchor" id="" style="height: 50px;"></textarea>
+                                            <small style="font-size: 10px;">Copy link or Embed HTML code into your application to verify Business to your customers.</small>
 
-                      <p class="mt-3" style="font-size: 15px;">Financial Institution Linked </p>
-                      <hr>
-                        <div class="row p-0 m-0" style="width: 100%; height: 80px; background: #e6e6e6; overflow: hidden; overflow-x: scroll;">
-                           <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
-                             <img style="width: 100%; height: 100%;" src="images/gtbank-icon.jfif" alt="">
-                           </div>
-                           <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
-                            <img style="width: 100%; height: 100%;" src="images/fedelity.jpg" alt="">
-                          </div>
-                          <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
-                            <img style="width: 100%; height: 100%;" src="images/zenith.png" alt="">
-                          </div>  
-                        </div>
-                      <hr>
-                  </div>
-                </div>
-                <div class="float-right b2b-button ml-2 mt-3">
-                  <button class="btn btn-danger">MONO <br> <small>B2B Account Verification</small></button>
-                  <p class="m-0 mt-2 p-0" style="font-size: 10px; font-weight: normal;">Click the MONO button to begin bank account verification for Business to Business(B2B) transactions</p>
-                </div>
-              </div>
-
-
+                                            <p class="mt-3" style="font-size: 15px;">Financial Institution Linked </p>
+                                            <hr>
+                                            <div class="row p-0 m-0" style="width: 100%; height: 80px; background: #e6e6e6; overflow: hidden; overflow-x: scroll;">
+                                                <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
+                                                    <img style="width: 100%; height: 100%;" src="images/gtbank-icon.jfif" alt="">
+                                                </div>
+                                                <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
+                                                    <img style="width: 100%; height: 100%;" src="images/fedelity.jpg" alt="">
+                                                </div>
+                                                <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
+                                                    <img style="width: 100%; height: 100%;" src="images/zenith.png" alt="">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="float-right b2b-button ml-2 mt-3">
+                                        <button class="btn btn-danger">MONO <br> <small>B2B Account Verification</small></button>
+                                        <p class="m-0 mt-2 p-0" style="font-size: 10px; font-weight: normal;">Click the MONO button to begin bank account verification for Business to Business(B2B) transactions</p>
+                                    </div>
+                                </div>
 
 
-              <div class="col-12 business-card mt-3 d-flex">
-                <div class="business-image mt-3">
-                  <img src="images/sample-logo.png" alt="">
-                </div>
-                <div class="float-right business-info pl-2 ml-2 mt-2">
-                  <span class="business-info-name">
+
+
+                                <div class="col-12 business-card mt-3 d-flex">
+                                    <div class="business-image mt-3">
+                                        <img src="images/sample-logo.png" alt="">
+                                    </div>
+                                    <div class="float-right business-info pl-2 ml-2 mt-2">
+                                        <span class="business-info-name">
                     Jane's Day Care
                   </span>
-                  <div class="form-group">
-                    <label class="mb-0" for="">Business CAC Verification link</label>
-                    <textarea class="form-control free-link mb-2" id="" rows="3"></textarea>
-                    <textarea class="form-control embed-anchor" id="" style="height: 50px;"></textarea>
-                    <small style="font-size: 10px;">Copy link or Embed HTML code into your application to verify Business to your customers.</small>
+                                        <div class="form-group">
+                                            <label class="mb-0" for="">Business CAC Verification link</label>
+                                            <textarea class="form-control free-link mb-2" id="" rows="3"></textarea>
+                                            <textarea class="form-control embed-anchor" id="" style="height: 50px;"></textarea>
+                                            <small style="font-size: 10px;">Copy link or Embed HTML code into your application to verify Business to your customers.</small>
 
-                      <p class="mt-3" style="font-size: 15px;">Financial Institution Linked </p>
-                      <hr>
-                        <div class="row p-0 m-0" style="width: 100%; height: 80px; background: #e6e6e6; overflow: hidden; overflow-x: scroll;">
-                           <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
-                             <img style="width: 100%; height: 100%;" src="images/gtbank-icon.jfif" alt="">
-                           </div>
-                           <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
-                            <img style="width: 100%; height: 100%;" src="images/fedelity.jpg" alt="">
-                          </div>
-                          <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
-                            <img style="width: 100%; height: 100%;" src="images/zenith.png" alt="">
-                          </div>  
+                                            <p class="mt-3" style="font-size: 15px;">Financial Institution Linked </p>
+                                            <hr>
+                                            <div class="row p-0 m-0" style="width: 100%; height: 80px; background: #e6e6e6; overflow: hidden; overflow-x: scroll;">
+                                                <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
+                                                    <img style="width: 100%; height: 100%;" src="images/gtbank-icon.jfif" alt="">
+                                                </div>
+                                                <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
+                                                    <img style="width: 100%; height: 100%;" src="images/fedelity.jpg" alt="">
+                                                </div>
+                                                <div class="mx-2 my-2 border" style="width: 60px; height: 50px; border-radius: 3px;">
+                                                    <img style="width: 100%; height: 100%;" src="images/zenith.png" alt="">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="float-right b2b-button ml-2 mt-3">
+                                        <button class="btn btn-danger">MONO <br> <small>B2B Account Verification</small></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      <hr>
-                  </div>
+                        <hr>
+                    </div>
                 </div>
-                <div class="float-right b2b-button ml-2 mt-3">
-                  <button class="btn btn-danger">MONO <br> <small>B2B Account Verification</small></button>
-                  <p class="m-0 mt-2 p-0" style="font-size: 10px; font-weight: normal;">Click the MONO button to begin bank account verification for Business to Business(B2B) transactions</p>
+                <div class="float-right b2b-button ml-2 mt-3 hidden-display">
+                    <button class="btn btn-danger">MONO <br> <small>B2B Account Verification</small></button>
+                    <p class="m-0 mt-2 p-0" style="font-size: 10px; font-weight: normal;">Click the MONO button to begin bank account verification for Business to Business(B2B) transactions</p>
                 </div>
               </div>      
                              
             </div>
-          </div>
+
         </div>
-      </div>
     </div>
-  </div>
+    </div>
 
 
   <div id="main" style="overflow-y: auto; height: 630px; overflow-x: hidden; position: absolute; left: 100px; top: 30px;">
@@ -175,9 +187,11 @@
 
 
 
-  <script src="js/general/third_party_cdn.js"></script>
-  <script src="js/general/windowPopUp.js"></script>
-  <script src="js/general/apiRoutes.js"></script>
+    <script src="js/general/third_party_cdn.js"></script>
+    <script src="js/general/windowPopUp.js"></script>
+    <script src="js/general/apiRoutes.js"></script>
+    <script src="js/apis/business/get-users-business.js"></script>
+    <script src="js/apis/dashboard.js"></script>
 </body>
 
 </html>
