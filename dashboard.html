@@ -142,9 +142,30 @@
                   <button class="btn btn-danger">MONO <br> <small>B2B Account Verification</small></button>
                   <p class="m-0 mt-2 p-0" style="font-size: 10px; font-weight: normal;">Click the MONO button to begin bank account verification for Business to Business(B2B) transactions</p>
                 </div>
-              </div>        
-
+              </div>      
+                             
             </div>
+          
+            <div id="main" style="overflow-y: auto; height: 100%; overflow-x: hidden; position: absolute; left: 294; top: 44; border: ">
+              <iframe name="main" src="http://localhost:3000" height="710px" width="610px" scrolling="no" border="0" frameborder="0" allowtransparency="true" class="frame">
+              </iframe>
+            </div>
+
+            <script>
+                window.addEventListener("message", (e) => receiveMessage(e));
+
+              const receiveMessage = (event) => {
+                const type = event.data.type;
+
+                switch (type) {
+                  case 'mono.connect.widget.linked':
+                    //Close Modal and call ur backend api
+                    document.querySelector('#main').style.display = 'none'
+                    console.log(event.data.data.code)
+                    break;
+                }
+              }
+            </script>
           </div>
         </div>
       </div>
